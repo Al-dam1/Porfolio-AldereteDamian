@@ -144,7 +144,7 @@ span {
 .btn-whatsapp {
   display: inline-block;
   padding: 1rem 3rem 1rem 0;
-  background-color:var(--main-color);
+  background-color: var(--main-color);
   border-radius: 4rem;
   font-size: 2rem;
   color: var(--bg-color);
@@ -152,7 +152,9 @@ span {
   transition: 0.3s ease;
   text-align: center;
 }
-.btn{background-color: var(--main-color);}
+.btn {
+  background-color: var(--main-color);
+}
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;
@@ -162,7 +164,7 @@ span {
   margin: 0;
   border-right: 0.2rem solid var(--bg-color);
   padding-left: 0.7rem;
-  gap: 1rem
+  gap: 1rem;
 }
 .btn:hover {
   box-shadow: 0 0 1.6rem var(--main-color);
@@ -174,34 +176,125 @@ span {
 }
 
 /* about*/
-.about{
+.about {
   background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+ align-items: center;
+ gap: 2rem;
 }
-.abaout .heading{
+.abaout .heading {
   text-align: start;
 }
-.abaout-img img{
+.abaout-img img {
   width: 30vh;
-  border: .2rem solid var(--main-color);
+  border: 0.2rem solid var(--main-color);
   border-radius: 50%;
-  box-shadow:  0 0 2rem var(--main-color);
+  box-shadow: 0 0 2rem var(--main-color);
   cursor: pointer;
-  transition: .4s ease;
+  transition: 0.4s ease;
   animation: floatImage 4s ease-in-out infinite;
 }
-.abaout-img img:hover{
- box-shadow:  0 0 2rem var(--main-color),
- 0 0 3.5rem var(--main-color),
- 0 0 4.5rem var(--main-color);
+.abaout-img img:hover {
+  box-shadow:
+    0 0 2rem var(--main-color),
+    0 0 3.5rem var(--main-color),
+    0 0 4.5rem var(--main-color);
 }
-@keyframes floatImage{
-  0%{
+@keyframes floatImage {
+  0% {
     transform: translateY(0);
   }
-  50%{
+  50% {
     transform: translateY(-2.4rem);
   }
-  100%{
+  100% {
     transform: translateY(0);
   }
 }
+.about-content{
+  padding: 0 4rem;
+}
+.about-content h2{
+  line-height: 1.2rem;
+}
+.about-content h3{
+  font-size: 3rem;
+}
+.about-content p{
+  margin: 2rem 0 3rem;
+}
+
+/* skills */
+
+.skills h3{
+  display: inline-flex;
+  margin-bottom: 2rem;
+  border-bottom: .2rem solid var(--main-color);
+}
+.content-skills{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: center;
+}
+.items-skills span,
+.items-skills i{
+  display: block;
+  color: var(--main-color);
+  font-weight: 600;
+}
+.item-skills{
+  padding: 1rem;
+}
+.items-skills i{
+  font-size: 5rem;
+}
+
+/* servicios */
+.servicios h2{margin-bottom: 2rem;}
+.services-content{ display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+}
+.service-items{
+  flex: 1 1 30rem;
+  background-color: var(--second-color);
+  padding: 6rem 2rem 6rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 .5rem var(--main-color);
+  transition: all .5s ease;
+}
+.service-items:hover{
+  cursor: pointer;
+  transform: translateY(-5rem) scale(1.02);
+}
+.service-items i{
+  font-size: 6rem;
+  color: var(--main-color);
+}
+.service-items h3{
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+.service-items p{
+  margin: 1rem 0;
+}
+.btn-now{
+  display: inline-block;
+  font-size: 2.2rem;
+  line-height: 1.2rem;
+  font-weight: 700;
+  padding: .7rem 0;
+  color: var(--text-color);
+  border-bottom: .2rem solid var(--other-color);
+}
+.btn now i{
+  vertical-align: middle;
+  font-size: 2.5rem;
+  margin-left: .5rem;
+}
+.btn-now:hover{border-bottom-color: var(--main-color);}
