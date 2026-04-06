@@ -2,8 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
-  border: none;
+  text-decoration: none !important;
+  border: none; 
 }
 
 :root {
@@ -31,7 +31,7 @@ section {
 /* utilidades */
 
 .heading {
-  font-size: 1.8rem;
+  font-size: 4.5rem;
   text-align: center;
 }
 .heading-description {
@@ -73,8 +73,8 @@ span {
 .navbar a {
   color: var(--text-color);
   font-weight: 600;
-  transition: 0.3s ease;
-  border-bottom: 0.3rem solid transparent;
+  transition: .3s ease;
+  border-bottom: .3rem solid transparent;
   text-transform: capitalize;
 }
 .navbar a:hover,
@@ -141,36 +141,42 @@ span {
 }
 
 .btn,
-.btn-whatsapp {
-  display: inline-block;
-  padding: 1rem 3rem 1rem 0;
-  background-color: var(--main-color);
-  border-radius: 4rem;
-  font-size: 2rem;
+.btn-ws {
+  display: inline-flex;
+  align-items: center !important;
+  gap: .8rem;
+  padding: 1.5rem 3rem !important;
+  margin: 1rem 3rem 1rem 0 !important;
+  border-radius: 4rem !important;
+  font-size: 2rem !important;
+  background-color: var(--main-color) !important;
   color: var(--bg-color);
-  font-weight: 400;
+  font-weight: 400 !important;
   transition: 0.3s ease;
   text-align: center;
 }
-.btn {
-  background-color: var(--main-color);
-}
-.btn-whatsapp {
+
+.btn-ws{
   display: inline-flex;
   align-items: center;
-  background-color: green;
+  background-color: green !important;
 }
-.btn-whatsapp i {
+.btn-ws i {
+  font-size: 2.5rem;
+  padding-right: .5rem;
+}
+
+.btn-ws p{
   margin: 0;
-  border-right: 0.2rem solid var(--bg-color);
-  padding-left: 0.7rem;
-  gap: 1rem;
+  border-left: .2rem solid var(--main-color);
+  padding-left: .7rem;
+  
 }
 .btn:hover {
   box-shadow: 0 0 1.6rem var(--main-color);
   transform: scale(1.1);
 }
-.btn-whatsapp:hover {
+.btn-ws:hover {
   box-shadow: 0 0 1.6rem green;
   transform: scale(1.1);
 }
@@ -364,4 +370,86 @@ span {
 }
 .portfolio-item p{
   margin-bottom: 2rem;
+}
+
+/* contacto */
+.contact{
+
+  text-align: center;
+  background-color: var(--bg-color);
+}
+.content-contact{display: flex;
+gap: 6rem;
+padding: 3rem 0;}
+.img-contact{
+  width: 100%;
+  height: 58rem;
+}
+.contact form{
+  width: 50%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 2rem;
+  border: .2rem solid var(--main-color);
+  padding: 3rem;
+  transition: all .3s ease;
+}
+.contact form:hover{
+  transform: scale(1.03);
+  cursor: pointer;
+}
+form input,
+form textarea{
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: var(--second-color);
+  border-bottom: 0.25rem solid var(--main-color);
+  border-radius: 0.8rem 0.8rem 0 0;
+  margin: 0.7rem 0;
+}
+form textarea{
+  margin-bottom: 2rem;
+}
+.btn-submit .btn{
+  width: auto;
+  cursor: pointer;
+}
+form input:focus,
+form textarea:focus{
+  outline: none;
+  box-shadow: 0 0.2rem 0.2rem -0.1rem var(--main-color);
+}
+
+/* footer */
+
+.footer{
+  background-color: var(--second-color);
+  padding: 40px 0;
+  text-align: center;
+  border-top: 0.2rem solid var(--main-color);
+}
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.arrow a{
+  display: inline-flex;
+  color: var(--main-color);
+  border: 0.2rem solid var(--main-color);
+  font-size: 3rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  transition: 0.3s ease;
+}
+.arrow a:hover{
+  box-shadow: 0 0 2.5rem var(--main-color);
+  transform: scale(1.1) translateY(-1rem);
+}
+.footer p{
+  color: var(--text-color);
 }
